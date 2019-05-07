@@ -1,0 +1,13 @@
+<img src="<%= @film.logo %>" width="200" height="315">
+<h1><%= @film.name %></h1>
+<h3>Directed by:
+  <a href="/directors/<%= @film.director_id %>">
+    <%= (Directors.find_director(@film.director_id)).name %>
+  </a>
+</h3>
+<a href="/films/<%= @film.id %>/edit">Edit Film</a>
+<form action="/films/<%= @film.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Delete">
+
+</form>

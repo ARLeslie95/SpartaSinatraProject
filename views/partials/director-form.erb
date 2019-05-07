@@ -1,0 +1,14 @@
+<form action="/directors/<%= @director.director_id %>" method="post">
+  <div>
+  <label>Name</label>
+  <input type="text" name="name" placeholder="Enter Director's Name" value="<%= @director.name %>">
+  </div>
+
+  <div>
+    <input type="submit" value="Enter Director">
+  </div>
+
+  <% if (@director.director_id) %>
+  <input type="hidden" name="_method" value="put">
+  <% end %>
+</form>

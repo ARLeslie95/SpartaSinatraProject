@@ -1,0 +1,22 @@
+<form action="/films/<%= @film.id %>" method="post">
+  <div>
+  <label>Film Name</label>
+  <input type="text" name="name" placeholder="Enter Film Name" value="<%= @film.name %>">
+  </div>
+  <div>
+    <label>Director</label>
+    <input type="text" name="director" placeholder="Enter Director" value="<%= @director.name %>">
+  </div>
+  <div>
+    <label>Poster</label>
+    <input type="text" name="logo" placeholder="Enter Link for Poster" value="<%= @film.logo %>">
+  </div>
+
+  <div>
+    <input type="submit" value="Enter Film">
+  </div>
+
+  <% if (@film.id) %>
+  <input type="hidden" name="_method" value="put">
+  <% end %>
+</form>

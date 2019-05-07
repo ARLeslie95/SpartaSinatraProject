@@ -1,0 +1,11 @@
+<h1>Directors</h1>
+<div class="row">
+
+  <% @directors.each do |director| %>
+    <div class="col-md-3">
+      <h3>
+        <a href="directors/<%= director.director_id %>"><%= director.name %></a>
+      </h3>
+    </div>
+  <% end  %>
+</div>

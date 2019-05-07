@@ -1,0 +1,22 @@
+
+<h1>
+  <a href="/films">Films</a>
+</h1>
+<div class="container">
+<div class="row">
+
+  <% @films.each do |film| %>
+  <div class="col-md-3">
+
+    <img src="<%= film.logo %>" width="200" height="315">
+    <h3>
+      <a href="/films/<%= film.id %>">
+        <%= film.name %>
+      </a>
+    </h3>
+  </div>
+  <% end %>
+</div>
+
+
+</div>

@@ -1,0 +1,7 @@
+<h1><%= @director.name %></h1>
+<a href="/directors/<%= @director.director_id %>/edit">Edit Director</a>
+<form action="/directors/<%= @director.director_id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Delete">
+
+</form>

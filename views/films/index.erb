@@ -1,0 +1,18 @@
+<% @films.each do |film| %>
+  <div>
+    <img src="<%= film.logo %>" width="200" height="315">
+    <h3>
+      <a href="/films/<%= film.id %>">
+        <%= film.name %>
+      </a>
+    </h3>
+    <h4>Directed by:
+      <a href="/directors/<%= film.director_id %>">
+        <%= (Directors.find_director(film.director_id)).name %>
+      </a>
+    </h4>
+    <h2>
+    </h2>
+  </div>
+
+<% end %>
